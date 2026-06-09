@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhoWeTransform from "./components/WhoWeTransform";
 import RuminationMethod from "./components/RuminationMethod";
-import RuminationDifference from "./components/RuminationDifference";
+
 import Programs from "./components/Programs";
 import Testimonials from "./components/Testimonials";
 import AboutFounder from "./components/AboutFounder";
@@ -16,7 +16,7 @@ export default function App() {
       <Hero />
       <WhoWeTransform />
       <RuminationMethod />
-      <RuminationDifference />
+      
       <Programs />
       <Testimonials />
       <AboutFounder />

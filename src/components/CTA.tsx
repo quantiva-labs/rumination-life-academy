@@ -1,43 +1,39 @@
 export default function CTA() {
   return (
-    <section id="contact" className="py-8 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="rounded-[28px] bg-[#081B4B] text-white px-8 py-6 lg:px-10 lg:py-7 shadow-xl">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+    <section id="cta" className="bg-white py-10">
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="relative overflow-hidden rounded-[30px] bg-[#081B4B] px-8 py-10 text-white shadow-2xl lg:px-12 lg:py-12">
+
+          {/* Very Light Globe Background */}
+          <div className="absolute inset-0 opacity-[0.05]">
+            <img
+              src="/globe-bg.png"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <div className="relative z-10 text-center">
+
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-cyan-300">
+              BEGIN YOUR TRANSFORMATION
+            </p>
+
+            <h2 className="text-3xl font-black leading-tight lg:text-5xl">
+              Change is one
+              <br />
+              conversation away.
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/80">
+              Whether you are seeking personal growth,
+              empowering learners, or building stronger organisations,
+              meaningful transformation begins with a single dialogue.
+            </p>
+
+           
             
-            {/* Left */}
-            <div>
-              <p className="text-xs font-black tracking-[0.25em] uppercase text-emerald-300 mb-2">
-                Begin Your Journey
-              </p>
 
-              <h2 className="text-2xl lg:text-3xl font-black">
-                Your Next Level Already Exists.
-              </h2>
-
-              <p className="text-white/70 mt-2">
-                Awareness Is The Beginning.
-              </p>
-            </div>
-
-            {/* Right */}
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="tel:+918778367708"
-                className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-400 to-sky-400 text-[#081B4B] font-bold hover:scale-105 transition"
-              >
-                Schedule Discovery Call
-              </a>
-
-              <a
-                href="https://wa.me/918778367708"
-                target="_blank"
-                rel="noreferrer"
-                className="px-6 py-3 rounded-xl border border-white/20 hover:bg-white/10 transition font-semibold"
-              >
-                WhatsApp
-              </a>
-            </div>
           </div>
         </div>
       </div>

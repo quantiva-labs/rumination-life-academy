@@ -1,34 +1,106 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#040B16] text-white">
-      <div className="max-w-7xl mx-auto px-6 py-6">
-        <div className="text-center">
-          <h3 className="text-lg font-black">Rumination Life Academy</h3>
+    <footer className="bg-black text-white">
+      <div className="mx-auto max-w-7xl px-6 py-8">
 
-          <p className="text-emerald-300 text-sm mt-1">
-            Where Change Happens
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+
+          {/* Column 1 */}
+          <div>
+            <div className="flex items-start gap-3">
+
+  <img
+    src="/logo.png"
+    alt="Rumination"
+    className="mt-1 h-8 w-auto"
+  />
+
+  <div>
+
+    <h2 className="text-xl font-bold leading-none">
+      Rumination Life Academy
+    </h2>
+
+    <p className="ml-[92px] mt-1 text-xs tracking-wide text-gray-400">
+      Where Change Happens
+    </p>
+
+  </div>
+
+</div>
+          </div>
+
+          {/* Column 2 */}
+          <div>
+            <h3 className="mb-3 text-xs uppercase tracking-[0.25em] text-gray-400">
+              Programs
+            </h3>
+
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>Individual</li>
+              <li>Academia</li>
+              <li>Corporate</li>
+            </ul>
+          </div>
+
+          {/* Column 3 */}
+          <div className="space-y-2 text-sm text-gray-300">
+
+            <div className="flex items-center gap-2">
+              <span>☎</span>
+              <span>+91 87783 67708</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span>💬</span>
+              <span>+91 87783 67708</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span>✉</span>
+              <span>subha@ruminationlifeacademy.com</span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <img
+                src="/social/linkedin.png"
+                alt="LinkedIn"
+                className="h-4 w-4"
+              />
+
+              <a
+                href="https://www.linkedin.com/in/rumination-life-academy-subha-nlp-a64768238/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span>📍</span>
+              <span>Chennai, India</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mt-6 flex flex-col gap-2 border-t border-white/10 pt-4 text-xs text-gray-500 md:flex-row md:justify-between">
+
+          <p>
+            © 2026 Rumination Life Academy
           </p>
 
-          <div className="mt-4 flex flex-wrap justify-center gap-5 text-sm text-white/70">
-            <a href="mailto:subha@ruminationlifeacademy.com">
-              Email: subha@ruminationlifeacademy.com
-            </a>
+          <p>
+            Powered by
+            <span className="ml-1 text-gray-300">
+              Rumination Transformation Engine™
+            </span>
+          </p>
 
-            <a href="tel:+918778367708">
-              Phone: +91 87783 67708
-            </a>
-
-            <span>Chennai, India</span>
-
-            <a href="#">LinkedIn</a>
-
-            <a href="#">Instagram</a>
-          </div>
-
-          <div className="mt-4 pt-4 border-t border-white/10 text-xs text-white/40">
-            © 2026 Rumination Life Academy. All Rights Reserved.
-          </div>
         </div>
+
       </div>
     </footer>
   );
