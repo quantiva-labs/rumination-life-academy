@@ -22,7 +22,7 @@ const stories = [
   {
     key: "GURU NANAK",
     logo: "/logos/guru-nanak.jpg",
-    name: "Mr. Manith Sing Nayar",
+    name: "Mr. Manjith Singh Nayar",
     role: "General Secretary",
     org: "Guru Nanak College, Chennai",
     quote:

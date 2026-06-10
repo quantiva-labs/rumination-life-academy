@@ -58,7 +58,7 @@ const corporateTeam: TeamMember[] = [
     image: "/vijayaraj.jpg",
     linkedin: "#",
     description:
-      "Mr. Vijayaraj P supports Rumination Life Academy with legal guidance, compliance awareness, and advisory support for corporate and institutional engagements.",
+       "Vijayaraj brings over 25 years of distinguished experience with a strong foundation in the legal domain. His deep expertise in law, compliance, and governance adds a rare layer of credibility and integrity to everything we do. Over the years, he has earned a reputation for sound judgment, ethical practice, and trusted counsel. His insight ensures that our programs and partnerships are guided by professionalism and strong values. With his guidance, the organisation stands on a foundation of trust, discipline, and lasting excellence."
   },
 ];
 
@@ -433,16 +433,7 @@ export default function AboutFounder() {
                     <h3 className="text-3xl font-bold text-slate-900">
                       {selectedMember.name}
                     </h3>
-                    <a
-                      href={selectedMember.linkedin}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={(e) =>
-                        selectedMember.linkedin === "#" && e.preventDefault()
-                      }
-                    >
-                      <LinkedInIcon />
-                    </a>
+                    
                   </div>
                   <p className="mt-2 text-lg text-slate-500">
                     {selectedMember.role}
