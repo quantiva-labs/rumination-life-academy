@@ -304,7 +304,7 @@ export default function AboutFounder() {
           </h3>
 
           <p className="mt-3 text-lg text-gray-400">
-            Transformed
+            Trusted Us
           </p>
         </div>
       </div>
