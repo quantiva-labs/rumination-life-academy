@@ -47,7 +47,7 @@ const stories = [
       "Partnering with Subha and Rumination Life Academy elevated our L&D outcomes. Her NLP anchored, experiential design creates genuine behavioural shifts and measurable capability growth.",
   },
   {
-    key: "Pain du soleil ",
+    key: "Pain du soleil",
     logo: "/logos/pain du soleil.jpg",
     name: "Anbu Ravikumar",
     role: "Planning head, Pain du soleil",
@@ -82,15 +82,12 @@ export default function TestimonialsImpact() {
     <section id="testimonials" className="bg-white py-14">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto mb-8">
-          
-
           <h2 className="text-2xl lg:text-4xl font-bold text-[#05263B]">
-            Partnering with Institutions and Organisations Shaping Human Potential
+            Partnering with Institutions and Organisations Shaping Human
+            Potential
           </h2>
 
           <div className="w-20 h-1 bg-gradient-to-r from-[#05263B] via-[#0F8B6F] to-[#B01886] mx-auto mt-4 mb-4" />
-
-          
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-5 lg:gap-8 mb-8">
@@ -117,13 +114,15 @@ export default function TestimonialsImpact() {
           })}
         </div>
 
-        <div className="relative rounded-[24px] border border-[#E2ECEE] bg-white p-6 lg:p-8 shadow-[0_16px_45px_rgba(0,0,0,0.04)] overflow-hidden">
-          <div className="absolute top-4 right-6 text-[70px] text-[#0F8B6F]/5 font-serif">
+        {/* TESTIMONIAL CARD */}
+
+        <div className="relative overflow-hidden rounded-[24px] border border-[#1F2937] bg-black p-6 shadow-[0_16px_45px_rgba(0,0,0,0.20)] lg:p-8">
+          <div className="absolute right-6 top-4 font-serif text-[70px] text-white/10">
             ”
           </div>
 
-          <div className="grid lg:grid-cols-[48px_1fr] gap-4">
-            <div className="text-[42px] leading-none text-[#0F8B6F] font-serif">
+          <div className="grid gap-4 lg:grid-cols-[48px_1fr]">
+            <div className="font-serif text-[42px] leading-none text-[#76B82A]">
               “
             </div>
 
@@ -134,21 +133,23 @@ export default function TestimonialsImpact() {
                 className="h-8 object-contain mb-4"
               />
 
-              <p className="text-lg lg:text-xl leading-8 text-[#05263B] font-medium">
+              <p className="text-lg lg:text-xl leading-8 text-white font-medium">
                 {current.quote}
               </p>
 
-              <div className="w-14 h-[2px] bg-[#0F8B6F] mt-5 mb-4" />
+              <div className="w-14 h-[2px] bg-[#76B82A] mt-5 mb-4" />
 
-              <h3 className="text-lg font-extrabold text-[#05263B]">
+              <h3 className="text-lg font-extrabold text-white">
                 {current.name}
               </h3>
 
-              <p className="mt-1 text-sm text-[#0F8B6F] font-bold">
+              <p className="mt-1 text-sm font-bold text-[#76B82A]">
                 {current.role}
               </p>
 
-              <p className="text-sm text-slate-500 mt-1">{current.org}</p>
+              <p className="mt-1 text-sm text-gray-300">
+                {current.org}
+              </p>
             </div>
           </div>
         </div>
@@ -159,7 +160,9 @@ export default function TestimonialsImpact() {
               key={index}
               onClick={() => setActive(index)}
               className={`h-2.5 rounded-full transition-all duration-300 ${
-                active === index ? "w-7 bg-[#0F8B6F]" : "w-2.5 bg-[#B7DFE3]"
+                active === index
+                  ? "w-7 bg-[#76B82A]"
+                  : "w-2.5 bg-[#B7DFE3]"
               }`}
             />
           ))}

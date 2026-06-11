@@ -1,12 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import WhoWeTransform from "./components/WhoWeTransform";
+import WhoWeTransformPrograms from "./components/WhoWeTransformPrograms";
 import RuminationMethod from "./components/RuminationMethod";
-
-import Programs from "./components/Programs";
 import Testimonials from "./components/Testimonials";
 import AboutFounder from "./components/AboutFounder";
-import CTA from "./components/CTA";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -14,13 +12,11 @@ export default function App() {
     <div className="bg-white overflow-x-hidden">
       <Navbar />
       <Hero />
-      <WhoWeTransform />
+      <WhoWeTransformPrograms />
       <RuminationMethod />
-      
-      <Programs />
       <Testimonials />
       <AboutFounder />
-      <CTA />
+      <Contact />
       <Footer />
     </div>
   );

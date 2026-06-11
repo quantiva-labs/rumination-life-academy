@@ -40,7 +40,7 @@ export default function RuminationMethod() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActive((prev) => (prev + 1) % stages.length);
-    }, 10000);
+    }, 20000);
 
     return () => clearInterval(timer);
   }, []);
@@ -100,13 +100,13 @@ export default function RuminationMethod() {
                         key={active}
                         initial={{ width: "0%" }}
                         animate={{ width: "100%" }}
-                        transition={{ duration: 10, ease: "linear" }}
+                        transition={{ duration: 20, ease: "linear" }}
                         className="h-full bg-gradient-to-r from-[#05263B] via-[#0F8B6F] to-[#B01886]"
                       />
                     </div>
 
                     <div className="mt-4 flex items-center justify-between text-xs font-bold text-slate-500">
-                      <span>Auto advancing every 15 seconds</span>
+                      <span>Auto advancing every 20 seconds</span>
                       <span>
                         {active + 1} / {stages.length}
                       </span>

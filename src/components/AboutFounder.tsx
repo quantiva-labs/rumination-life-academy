@@ -153,7 +153,7 @@ export default function AboutFounder() {
 
         <div className="mx-auto mb-20 max-w-5xl text-center">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#1d4f91]">
-            About
+            About Us
           </p>
           <p className="text-lg leading-8 text-slate-700 lg:text-xl lg:leading-9">
             We began with a simple belief that human potential is far greater
