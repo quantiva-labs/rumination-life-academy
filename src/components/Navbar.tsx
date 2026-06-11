@@ -33,7 +33,7 @@ export default function Navbar() {
   <img
     src="/logo.svg"
     alt="Rumination Life Academy"
-    className="h-14 w-14 object-contain"
+    className="h-[60px] w-[60px] object-contain"
   />
 
   <div className="leading-none">
