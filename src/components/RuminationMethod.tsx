@@ -84,9 +84,7 @@ export default function RuminationMethod() {
                         {current.title}
                       </h2>
 
-                      <p className="text-xl lg:text-2xl font-black text-[#0F8B6F] mb-6">
-                        {current.headline}
-                      </p>
+                      
 
                       <p className="text-slate-600 text-lg leading-9 max-w-3xl">
                         {current.text}
