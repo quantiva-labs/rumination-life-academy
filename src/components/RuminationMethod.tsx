@@ -5,28 +5,28 @@ import { AnimatePresence, motion } from "framer-motion";
 const stages = [
   {
     title: "Discover",
-    headline: "Uncover What Shapes You",
+    
     text: "Uncovering the deep-rooted patterns, beliefs, and behavioural loops that silently shape thinking, perception, decisions, actions, and the direction of life itself.",
     insight:
       "Transformation begins with awareness. What remains unseen continues to shape outcomes.",
   },
   {
     title: "Dissolve",
-    headline: "Release What Restricts You",
+    
     text: "Dismantling the internal limitations, fear patterns, and conditioned thinking that relentlessly restrict growth, clarity, capability, and conscious progression.",
     insight:
       "Growth accelerates when limitations are identified and consciously released.",
   },
   {
     title: "Design",
-    headline: "Create Who You Can Become",
+    
     text: "Reconstructing awareness, mindset, identity, and human capability through deliberate transformation aligned with meaningful evolution and future possibilities.",
     insight:
       "Lasting change requires the intentional reconstruction of mindset, identity, and capability.",
   },
   {
     title: "Deliver",
-    headline: "Live Transformation Daily",
+    
     text: "Anchoring transformation into everyday thinking, communication, behaviour, leadership, learning, and action until excellence becomes a lived identity rather than a temporary outcome.",
     insight:
       "True transformation is complete only when it becomes visible in everyday actions and results.",
@@ -46,8 +46,8 @@ export default function RuminationMethod() {
   }, []);
 
   return (
-    <section id="method" className="bg-white py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="method" className="bg-white py-14 overflow-hidden">
+      <div className="max-w-8xl mx-auto px-9">
         <div className="relative overflow-hidden rounded-[38px] bg-gradient-to-br from-white via-[#F6FFFC] to-[#FDF4FF] border border-[#B7DFE3] shadow-xl">
 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_25%,rgba(15,139,111,.08),transparent_32%),radial-gradient(circle_at_82%_58%,rgba(176,24,134,.08),transparent_35%)]" />
@@ -80,7 +80,7 @@ export default function RuminationMethod() {
                       exit={{ opacity: 0, y: -18 }}
                       transition={{ duration: 0.45 }}
                     >
-                      <h2 className="text-4xl lg:text-6xl font-black leading-none mb-5 text-[#05263B]">
+                      <h2 className="text-1xl lg:text-4xl font-black leading-none mb-5 text-[#05263B]">
                         {current.title}
                       </h2>
 

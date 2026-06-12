@@ -231,9 +231,7 @@ export default function WhoWeTransformPrograms() {
                       <div className="mt-4">
   {active === "academia" ? (
     <a
-      href="/brochures/academia-brochure.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
+      href="/brochure-view"
       className="inline-flex rounded-full bg-[#D9A441] px-5 py-2.5 text-sm font-semibold text-[#111827] transition hover:bg-white"
     >
       View Brochure
