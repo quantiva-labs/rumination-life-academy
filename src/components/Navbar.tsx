@@ -38,17 +38,17 @@ export default function Navbar() {
 
   <div className="leading-none">
     <h1
-      style={{
-        fontFamily: "Jost",
-        fontWeight: 400,
-        letterSpacing: "-0.5px",
-      }}
-      className="text-[30px]"
-    >
-      <span className="text-[#0B1D3A]">Rumination</span>
-      <span className="text-[#76B82A]">Life</span>
-      <span className="text-[#0B1D3A]">Academy</span>
-    </h1>
+  style={{
+    fontFamily: "Jost",
+    fontWeight: 400,
+    letterSpacing: "-0.5px",
+  }}
+  className="text-[30px]"
+>
+  <span className="text-[#0B1D3A]">Rumination</span>
+  <span className="text-[#4DB7E5]">Life</span>
+  <span className="text-[#0B1D3A]">Academy</span>
+</h1>
 
     <div className="relative mt-1 h-5">
       <svg

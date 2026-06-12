@@ -1,13 +1,9 @@
-Hero
-
-import { Download, MessageCircle } from "lucide-react";
+import { Eye, MessageCircle } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#152B68] text-white">
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-24 grid lg:grid-cols-[0.95fr_1.05fr] gap-14 items-center">
-        
-        {/* LEFT CONTENT */}
         <div>
           <div className="flex items-center gap-6 mb-8">
             <p className="text-4xl lg:text-6xl italic font-serif font-semibold text-white">
@@ -23,8 +19,8 @@ export default function Hero() {
           </div>
 
           <p className="text-white/85 leading-7 max-w-xl">
-            Excellence already lives within. Deeper than any doubt.
-            Stronger than any setback.
+            Excellence already lives within. Deeper than any doubt. Stronger
+            than any setback.
           </p>
 
           <p className="text-white/85 leading-7 max-w-xl mt-5">
@@ -37,33 +33,28 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
+            <a
+              href="https://wa.me/918778367708"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105"
+            >
+              <MessageCircle size={18} />
+              Start the Conversation
+            </a>
 
-  <a
-    href="https://wa.me/918778367708"
-    target="_blank"
-    rel="noreferrer"
-    className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105"
-  >
-    <MessageCircle size={18} />
-    Start the Conversation
-  </a>
-
-  <a
-    href="/brochures/academia-brochure.pdf"
-    target="_blank"
-    rel="noreferrer"
-    className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#152B68]"
-  >
-    <Download size={18} />
-    Download Brochure
-  </a>
-
-</div>
-
-          
+            <a
+              href="/brochures/academia-brochure.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#152B68]"
+            >
+              <Eye size={18} />
+              View Brochure
+            </a>
+          </div>
         </div>
 
-        {/* RIGHT IMAGE */}
         <div className="relative flex justify-center lg:justify-end">
           <div className="w-full max-w-[580px]">
             <div className="rounded-[28px] overflow-hidden shadow-[0_25px_80px_rgba(0,0,0,0.35)] border border-white/10 bg-white/5 backdrop-blur-sm">
@@ -77,7 +68,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* BOTTOM CURVE */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg
           viewBox="0 0 1440 120"

@@ -151,7 +151,6 @@ export default function WhoWeTransformPrograms() {
   return (
     <section
       id="transform"
-      onClick={() => setActive(null)}
       className="relative overflow-hidden bg-[#F8F4E8] px-6 py-14"
     >
       <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-[#1E3A8A]/10 blur-3xl" />
@@ -177,111 +176,113 @@ export default function WhoWeTransformPrograms() {
           {ecosystems.map((eco) => {
             const isActive = active === eco.key;
 
+            if (active && !isActive) {
+              return null;
+            }
+
             return (
               <div
                 key={eco.key}
-                onClick={(e) => e.stopPropagation()}
-                className={`group rounded-[1.75rem] border p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                className={`rounded-[1.75rem] border shadow-sm transition-all duration-500 ${
                   isActive
-                    ? "border-[#152B68] bg-[#152B68] text-white"
-                    : "border-white/80 bg-white/90 text-[#111827]"
+                    ? "md:col-span-3 border-[#152B68] bg-[#152B68] text-white shadow-2xl"
+                    : "border-[#152B68] bg-[#152B68] p-6 text-white hover:-translate-y-1 hover:shadow-xl"
                 }`}
               >
-                <div
-                  className={`mb-5 h-1.5 w-16 rounded-full ${
-                    isActive ? "bg-[#D9A441]" : "bg-[#1E3A8A]"
-                  }`}
-                />
+                {!isActive ? (
+                  <>
+                    <div className="mb-5 h-1.5 w-16 rounded-full bg-white" />
 
-                <h3 className="font-serif text-2xl font-bold">{eco.title}</h3>
+                    <h3 className="font-serif text-2xl font-bold">
+                      {eco.title}
+                    </h3>
 
-                <p
-                  className={`mt-3 min-h-[54px] text-sm leading-6 ${
-                    isActive ? "text-white/85" : "text-gray-600"
-                  }`}
-                >
-                  {eco.desc}
-                </p>
+                    <p className="mt-3 min-h-[54px] text-sm leading-6 text-white/85">
+                      {eco.desc}
+                    </p>
 
-                <button
-                  onClick={() => handleExplore(eco.key)}
-                  className={`mt-5 rounded-full px-5 py-2.5 text-sm font-semibold transition ${
-                    isActive
-                      ? "bg-white text-[#152B68] hover:bg-[#F8F4E8]"
-                      : "bg-[#1E3A8A] text-white hover:bg-[#152B68]"
-                  }`}
-                >
-                  {isActive ? "Exit Programs" : "Explore Programs"}
-                </button>
+                    <button
+                      onClick={() => handleExplore(eco.key)}
+                      className="mt-5 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#152B68] transition hover:bg-[#F8F4E8]"
+                    >
+                      Explore Programs
+                    </button>
+                  </>
+                ) : (
+                  <div className="grid gap-6 p-6 md:grid-cols-[0.75fr_2.25fr] md:p-8">
+                    <div>
+                      <div className="mb-5 h-1.5 w-16 rounded-full bg-[#D9A441]" />
+
+                      <h3 className="font-serif text-3xl font-bold">
+                        {eco.title}
+                      </h3>
+
+                      <p className="mt-3 text-sm leading-6 text-white/85">
+                        {eco.desc}
+                      </p>
+
+                      <button
+                        onClick={() => setActive(null)}
+                        className="mt-6 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#152B68] transition hover:bg-[#F8F4E8]"
+                      >
+                        Close Programs
+                      </button>
+
+                      <div className="mt-4">
+  {active === "academia" ? (
+    <a
+      href="/brochures/academia-brochure.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex rounded-full bg-[#D9A441] px-5 py-2.5 text-sm font-semibold text-[#111827] transition hover:bg-white"
+    >
+      View Brochure
+    </a>
+  ) : (
+    <button
+      disabled
+      className="inline-flex cursor-not-allowed rounded-full bg-white/30 px-5 py-2.5 text-sm font-semibold text-white"
+    >
+      Brochure Coming Soon
+    </button>
+  )}
+</div>
+                    </div>
+
+                    <div className="grid gap-4 lg:grid-cols-3">
+                      {programs[active].map((program) => (
+                        <div
+                          key={program.title}
+                          className="rounded-[1.5rem] border border-[#2A4A9B] bg-white p-5 transition hover:-translate-y-1 hover:shadow-xl"
+                        >
+                          <h4 className="text-base font-bold uppercase tracking-wide text-[#152B68]">
+                            {program.title}
+                          </h4>
+
+                          <p className="mt-2 text-sm leading-6 text-gray-600">
+                            {program.desc}
+                          </p>
+
+                          <ul className="mt-4 space-y-2">
+                            {program.items.map((item) => (
+                              <li
+                                key={item}
+                                className="flex gap-2 text-sm leading-6 text-[#152B68]"
+                              >
+                                <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#D9A441]" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             );
           })}
         </div>
-
-        {active && (
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="mt-9 rounded-[2rem] border border-white/80 bg-white/95 p-6 shadow-2xl md:p-8"
-          >
-            <div className="mb-7 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#1E3A8A]">
-                  Programs
-                </p>
-
-                <h3 className="mt-2 font-serif text-3xl font-bold capitalize text-[#111827]">
-                  {active}
-                </h3>
-              </div>
-
-              {active === "academia" ? (
-                <a
-                  href="/brochures/academia-brochure.pdf"
-                  download
-                  className="inline-flex w-fit rounded-full bg-[#152B68] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1E3A8A]"
-                >
-                  Download Brochure
-                </a>
-              ) : (
-                <button
-                  disabled
-                  className="inline-flex w-fit cursor-not-allowed rounded-full bg-gray-400 px-5 py-2.5 text-sm font-semibold text-white"
-                >
-                  Brochure Coming Soon
-                </button>
-              )}
-            </div>
-
-            <div className="grid gap-5 lg:grid-cols-3">
-              {programs[active].map((program) => (
-                <div
-                  key={program.title}
-                  className="rounded-[1.5rem] border border-[#2A4A9B] bg-[#152B68] p-5 transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <h4 className="text-lg font-bold uppercase tracking-wide text-white">
-                    {program.title}
-                  </h4>
-
-                  <p className="mt-2 text-sm leading-6 text-blue-100">
-                    {program.desc}
-                  </p>
-
-                  <ul className="mt-5 space-y-2">
-                    {program.items.map((item) => (
-                      <li
-                        key={item}
-                        className="flex gap-2 text-sm leading-6 text-white"
-                      >
-                        <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#D9A441]" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
