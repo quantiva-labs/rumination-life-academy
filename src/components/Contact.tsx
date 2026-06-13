@@ -4,32 +4,36 @@ import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [status, setStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus("");
+    setIsSending(true);
 
     const form = e.currentTarget;
 
     try {
       await emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_c5pykdv",
+        "template_xn5boih",
         form,
-        "YOUR_PUBLIC_KEY"
+        "b7t25jLi5nFoHe6b7"
       );
 
       setStatus("Thank you. We have received your enquiry.");
       form.reset();
-    } catch {
+    } catch (error) {
+      console.error("EmailJS Error:", error);
       setStatus("Something went wrong. Please try again.");
+    } finally {
+      setIsSending(false);
     }
   };
 
   return (
     <section id="contact" className="bg-[#F8F4E8] px-6 py-14">
       <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[2rem] bg-white shadow-2xl lg:grid-cols-[0.9fr_1.1fr]">
-        {/* LEFT CONTENT */}
         <div className="relative overflow-hidden bg-[#081B4B] px-8 py-10 text-white md:px-10">
           <div className="absolute inset-0 opacity-20">
             <div className="absolute left-10 top-10 h-56 w-56 rounded-full bg-cyan-400/20 blur-3xl" />
@@ -63,7 +67,7 @@ export default function Contact() {
                     Address
                   </p>
                   <p className="mt-1 text-sm leading-6 text-white">
-                    Chennai, India
+                    Tiruvannamalai, India
                   </p>
                 </div>
               </div>
@@ -91,7 +95,7 @@ export default function Contact() {
                     Phone
                   </p>
                   <p className="mt-1 text-sm leading-6 text-white">
-                    +91 8778367708
+                    +91 87783 67708
                   </p>
                 </div>
               </div>
@@ -99,7 +103,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* RIGHT FORM */}
         <form onSubmit={handleSubmit} className="bg-white p-7 md:p-9">
           <div className="grid gap-4 md:grid-cols-2">
             <div>
@@ -160,9 +163,13 @@ export default function Contact() {
                 className="w-full rounded-xl border border-gray-300 px-4 py-3 text-sm text-gray-600 outline-none transition focus:border-[#152B68]"
               >
                 <option value="">Select an option</option>
-                <option>Individual Programs</option>
+                <option>Individual Transformation</option>
                 <option>Academia Programs</option>
                 <option>Corporate Programs</option>
+                <option>Leadership Coaching</option>
+                <option>NLP Certification</option>
+                <option>Strategic Partnership</option>
+                <option>Other</option>
               </select>
             </div>
 
@@ -180,17 +187,12 @@ export default function Contact() {
             </div>
           </div>
 
-          <input
-            type="hidden"
-            name="to_email"
-            value="subha@ruminationlifeacademy.com"
-          />
-
           <button
             type="submit"
-            className="mt-6 w-full rounded-full bg-[#76B82A] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#5f9f20]"
+            disabled={isSending}
+            className="mt-6 w-full rounded-full bg-[#76B82A] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#5f9f20] disabled:cursor-not-allowed disabled:opacity-60"
           >
-            Start the Conversation →
+            {isSending ? "Sending..." : "Start the Conversation →"}
           </button>
 
           {status && (

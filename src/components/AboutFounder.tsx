@@ -145,9 +145,9 @@ export default function AboutFounder() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="mb-12 overflow-hidden bg-slate-100 shadow-sm">
           <img
-            src="/about-rumination.png"
-            alt="Where change happens"
-            className="h-[320px] w-full object-cover lg:h-[430px]"
+            src="/about-us.svg"
+  alt="About Rumination Life Academy"
+  className="w-full h-auto rounded-2xl object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
 

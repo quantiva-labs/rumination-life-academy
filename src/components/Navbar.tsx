@@ -57,12 +57,12 @@ export default function Navbar() {
                 className="absolute left-0 top-0"
               >
                 <path
-                  d="M10 12 C90 2, 220 2, 310 12"
-                  stroke="#4DB7E5"
-                  strokeWidth="3"
-                  fill="none"
-                  strokeLinecap="round"
-                />
+  d="M10 12 C90 2, 220 2, 310 12"
+  stroke="#6BA539"
+  strokeWidth="3"
+  fill="none"
+  strokeLinecap="round"
+/>
               </svg>
 
               <p
