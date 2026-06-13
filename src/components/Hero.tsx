@@ -43,7 +43,9 @@ export default function Hero() {
             </a>
 
             <a
-  href="/brochure-view"
+  href="/academia-brochure.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
   className="inline-flex items-center gap-2 rounded-full bg-[#4DB7E5] px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#36A9DC] hover:scale-105"
 >
   <Eye size={18} />
