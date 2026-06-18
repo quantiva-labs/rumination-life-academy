@@ -11,3 +11,118 @@ body {
   font-family: Inter, sans-serif;
   background: #ffffff;
 }
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.galaxy {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.55;
+  background:
+    radial-gradient(circle at 65% 30%, rgba(77, 183, 229, 0.45), transparent 28%),
+    radial-gradient(circle at 80% 55%, rgba(245, 191, 85, 0.28), transparent 22%),
+    radial-gradient(circle at 45% 65%, rgba(90, 120, 255, 0.22), transparent 30%);
+  filter: blur(1px);
+  animation: galaxyMove 14s ease-in-out infinite alternate;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.95) 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(77,183,229,0.9) 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(245,191,85,0.9) 1px, transparent 1.5px);
+  background-size: 120px 120px, 190px 190px, 260px 260px;
+  background-position: 0 0, 40px 70px, 120px 30px;
+  animation: starsDrift 18s linear infinite;
+  opacity: 0.65;
+}
+
+.nebula-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.75;
+  background:
+    radial-gradient(circle at 72% 34%, rgba(77, 183, 229, 0.35), transparent 22%),
+    radial-gradient(circle at 80% 56%, rgba(216, 165, 63, 0.25), transparent 20%),
+    radial-gradient(circle at 58% 50%, rgba(92, 120, 255, 0.18), transparent 26%);
+  animation: nebulaMove 16s ease-in-out infinite alternate;
+}
+
+.cosmic-dust {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.65;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(77, 183, 229, 0.85) 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(216, 165, 63, 0.85) 1.2px, transparent 1.9px);
+  background-size: 130px 130px, 210px 210px, 310px 310px;
+  background-position: 0 0, 60px 80px, 140px 40px;
+  animation: cosmicDrift 22s linear infinite;
+}
+
+.shooting-star {
+  position: absolute;
+  top: 18%;
+  left: -20%;
+  z-index: 4;
+  width: 180px;
+  height: 2px;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.95), transparent);
+  transform: rotate(18deg);
+  animation: shootingStar 9s linear infinite;
+}
+
+@keyframes nebulaMove {
+  from {
+    transform: scale(1) translateX(0);
+    opacity: 0.55;
+  }
+
+  to {
+    transform: scale(1.08) translateX(-18px);
+    opacity: 0.85;
+  }
+}
+
+@keyframes cosmicDrift {
+  from {
+    background-position: 0 0, 60px 80px, 140px 40px;
+  }
+
+  to {
+    background-position: 320px 180px, 260px 330px, 480px 220px;
+  }
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translateX(0) translateY(0) rotate(18deg);
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateX(1800px) translateY(420px) rotate(18deg);
+    opacity: 0;
+  }
+}

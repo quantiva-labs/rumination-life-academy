@@ -68,10 +68,10 @@ export default function Navbar() {
               <p
                 style={{
                   fontFamily: "Jost",
-                  fontWeight: 400,
+                  fontWeight: 500,
                   letterSpacing: "4px",
                 }}
-                className="relative pt-[7px] text-center text-[10px] lowercase text-[#111111]"
+                className="relative pt-[10px] text-center text-[10px] lowercase text-[#111111]"
               >
                 where change happens
               </p>

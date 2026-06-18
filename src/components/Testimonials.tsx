@@ -19,15 +19,7 @@ const stories = [
     quote:
       "Subha Vijayaraj delivered exceptional value to our Faculty Development Programme. Her rare blend of behavioural insight and facilitation mastery elevated our faculty's self-awareness and pedagogical impact.",
   },
-  {
-    key: "GURU NANAK",
-    logo: "/logos/guru-nanak.jpg",
-    name: "Mr. Manjith Singh Nayar",
-    role: "General Secretary",
-    org: "Guru Nanak College, Chennai",
-    quote:
-      "Rumination Life Academy's leadership programs integrate NLP with strategic depth, aligning leaders around a clear institutional vision while transforming how they think, decide and influence.",
-  },
+  
   {
     key: "TCS",
     logo: "/logos/tcs.jpg",
