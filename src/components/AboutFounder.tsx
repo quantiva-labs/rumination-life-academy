@@ -58,7 +58,7 @@ const corporateTeam: TeamMember[] = [
     image: "/vijayaraj.jpg",
     linkedin: "#",
     description:
-       "Vijayaraj brings over 25 years of distinguished experience with a strong foundation in the legal domain. His deep expertise in law, compliance, and governance adds a rare layer of credibility and integrity to everything we do. Over the years, he has earned a reputation for sound judgment, ethical practice, and trusted counsel. His insight ensures that our programs and partnerships are guided by professionalism and strong values. With his guidance, the organisation stands on a foundation of trust, discipline, and lasting excellence."
+      "Vijayaraj brings over 25 years of distinguished experience with a strong foundation in the legal domain. His deep expertise in law, compliance, and governance adds a rare layer of credibility and integrity to everything we do. Over the years, he has earned a reputation for sound judgment, ethical practice, and trusted counsel. His insight ensures that our programs and partnerships are guided by professionalism and strong values. With his guidance, the organisation stands on a foundation of trust, discipline, and lasting excellence.",
   },
 ];
 
@@ -81,7 +81,9 @@ function ValueAnimation({ activeValue }: { activeValue: number }) {
           <div className="absolute left-[48%] top-[36%] h-10 w-10 rounded-full bg-white" />
           <div className="absolute left-[41%] top-[58%] h-2 w-36 bg-white/80" />
           <div className="absolute left-[37%] top-[52%] h-12 w-16 rounded-md border-4 border-white/80" />
-          <div className="absolute left-[55%] top-[26%] animate-bounce text-4xl">♡</div>
+          <div className="absolute left-[55%] top-[26%] animate-bounce text-4xl">
+            ♡
+          </div>
         </>
       ),
     },
@@ -142,12 +144,12 @@ export default function AboutFounder() {
 
   return (
     <section id="about" className="bg-white text-slate-900">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 pt-16 pb-0 lg:px-8">
         <div className="mb-12 overflow-hidden bg-slate-100 shadow-sm">
           <img
             src="/about-us.svg"
-  alt="About Rumination Life Academy"
-  className="w-full h-auto rounded-2xl object-cover transition-transform duration-500 hover:scale-105"
+            alt="About Rumination Life Academy"
+            className="w-full h-auto rounded-2xl object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
 
@@ -183,22 +185,22 @@ export default function AboutFounder() {
           </div>
 
           <div className="group overflow-hidden rounded-[1.5rem] bg-slate-100 shadow-sm cursor-pointer">
-  <img
-    src="/Who we are OPtion 1.jpeg"
-    alt="Rumination learning journeys"
-    className="h-[340px] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-  />
-</div>
+            <img
+              src="/Who we are OPtion 1.jpeg"
+              alt="Rumination learning journeys"
+              className="h-[340px] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            />
+          </div>
         </div>
 
         <div className="mb-20 grid items-center gap-10 lg:grid-cols-2">
-         <div className="group overflow-hidden rounded-[1.5rem] bg-slate-100 shadow-sm cursor-pointer">
-  <img
-    src="/vision.JPG"
-    alt="Rumination vision"
-    className="h-[340px] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-  />
-</div>
+          <div className="group overflow-hidden rounded-[1.5rem] bg-slate-100 shadow-sm cursor-pointer">
+            <img
+              src="/vision.JPG"
+              alt="Rumination vision"
+              className="h-[340px] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            />
+          </div>
 
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#1d4f91]">
@@ -251,84 +253,56 @@ export default function AboutFounder() {
         </div>
 
         {/* OUR PHILOSOPHY */}
+        <div className="relative left-1/2 mb-0 w-screen -translate-x-1/2 overflow-hidden bg-black px-12 pt-20 pb-8 text-white lg:px-24">
+          <div className="absolute inset-0 opacity-[0.08]">
+            <img src="/globe-bg.PNG" alt="" className="h-full w-full object-cover" />
+          </div>
 
-<div className="relative left-1/2 mb-20 w-screen -translate-x-1/2 overflow-hidden border-y border-white/10 bg-black px-12 py-20 text-white lg:px-24">
+          <div className="relative z-10">
+            <h2 className="mb-8 text-center text-5xl font-bold tracking-tight lg:text-5xl">
+              OUR PHILOSOPHY
+            </h2>
 
-  {/* Globe Background */}
-  <div className="absolute inset-0 opacity-[0.08]">
-    <img
-      src="/globe-bg.PNG"
-      alt=""
-      className="h-full w-full object-cover"
-    />
-  </div>
+            <p className="mx-auto mb-14 max-w-4xl text-center text-lg leading-10 text-gray-300">
+              Every transformation journey begins with awareness and progresses
+              through identity, capability, and meaningful evolution.
+            </p>
 
-  {/* Content */}
-  <div className="relative z-10">
+            <div className="mx-auto mb-12 h-px max-w-6xl bg-white/10"></div>
 
-    <h2 className="mb-8 text-center text-5xl font-bold tracking-tight lg:text-5xl">
-      OUR PHILOSOPHY
-    </h2>
+            <div className="grid gap-12 md:grid-cols-3">
+              <div className="flex items-start gap-6">
+                <div className="h-20 w-[3px] bg-red-600"></div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">10+ Years</h3>
+                  <p className="mt-2 text-lg text-gray-400">
+                    Empowering Change
+                  </p>
+                </div>
+              </div>
 
-    <p className="mx-auto mb-14 max-w-4xl text-center text-lg leading-10 text-gray-300">
-      Every transformation journey begins with awareness and progresses
-      through identity, capability, and meaningful evolution.
-    </p>
+              <div className="flex items-start gap-6">
+                <div className="h-20 w-[3px] bg-red-600"></div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">
+                    50+ Organisations
+                  </h3>
+                  <p className="mt-3 text-lg text-gray-400">Trusted Us</p>
+                </div>
+              </div>
 
-    <div className="mx-auto mb-12 h-px max-w-6xl bg-white/10"></div>
-
-    <div className="grid gap-12 md:grid-cols-3">
-
-      {/* Stat 1 */}
-      <div className="flex items-start gap-6">
-        <div className="h-20 w-[3px] bg-red-600"></div>
-
-        <div>
-          <h3 className="text-2xl font-bold text-white">
-            10+ Years
-          </h3>
-
-          <p className="mt-2 text-lg text-gray-400">
-            Empowering Change
-          </p>
+              <div className="flex items-start gap-6">
+                <div className="h-20 w-[3px] bg-red-600"></div>
+                <div>
+                  <h3 className="text-3xl font-bold text-white">
+                    40,000+ People
+                  </h3>
+                  <p className="mt-3 text-lg text-gray-400">Transformed</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Stat 2 */}
-      <div className="flex items-start gap-6">
-        <div className="h-20 w-[3px] bg-red-600"></div>
-
-        <div>
-          <h3 className="text-2xl font-bold text-white">
-            50+ Organisations
-          </h3>
-
-          <p className="mt-3 text-lg text-gray-400">
-            Trusted Us
-          </p>
-        </div>
-      </div>
-
-      {/* Stat 3 */}
-      <div className="flex items-start gap-6">
-        <div className="h-20 w-[3px] bg-red-600"></div>
-
-        <div>
-          <h3 className="text-3xl font-bold text-white">
-            40,000+ People
-          </h3>
-
-          <p className="mt-3 text-lg text-gray-400">
-            Transformed
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
       </div>
 
       {/* TEAM */}
@@ -385,15 +359,15 @@ export default function AboutFounder() {
                     </h4>
 
                     {member.linkedin !== "#" && (
-  <a
-    href={member.linkedin}
-    target="_blank"
-    rel="noreferrer"
-    aria-label={`${member.name} LinkedIn`}
-  >
-    <LinkedInIcon />
-  </a>
-)}
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${member.name} LinkedIn`}
+                      >
+                        <LinkedInIcon />
+                      </a>
+                    )}
                   </div>
 
                   <p className="text-base leading-6 text-slate-500">
@@ -433,7 +407,6 @@ export default function AboutFounder() {
                     <h3 className="text-3xl font-bold text-slate-900">
                       {selectedMember.name}
                     </h3>
-                    
                   </div>
                   <p className="mt-2 text-lg text-slate-500">
                     {selectedMember.role}

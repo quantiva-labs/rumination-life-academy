@@ -1,32 +1,27 @@
-
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const stages = [
   {
     title: "Discover",
-    
     text: "Uncovering the deep-rooted patterns, beliefs, and behavioural loops that silently shape thinking, perception, decisions, actions, and the direction of life itself.",
     insight:
       "Transformation begins with awareness. What remains unseen continues to shape outcomes.",
   },
   {
     title: "Dissolve",
-    
     text: "Dismantling the internal limitations, fear patterns, and conditioned thinking that relentlessly restrict growth, clarity, capability, and conscious progression.",
     insight:
       "Growth accelerates when limitations are identified and consciously released.",
   },
   {
     title: "Design",
-    
     text: "Reconstructing awareness, mindset, identity, and human capability through deliberate transformation aligned with meaningful evolution and future possibilities.",
     insight:
       "Lasting change requires the intentional reconstruction of mindset, identity, and capability.",
   },
   {
     title: "Deliver",
-    
     text: "Anchoring transformation into everyday thinking, communication, behaviour, leadership, learning, and action until excellence becomes a lived identity rather than a temporary outcome.",
     insight:
       "True transformation is complete only when it becomes visible in everyday actions and results.",
@@ -46,30 +41,26 @@ export default function RuminationMethod() {
   }, []);
 
   return (
-    <section id="method" className="bg-white py-14 overflow-hidden">
-      <div className="max-w-8xl mx-auto px-9">
-        <div className="relative overflow-hidden rounded-[38px] bg-gradient-to-br from-white via-[#F6FFFC] to-[#FDF4FF] border border-[#B7DFE3] shadow-xl">
-
+    <section id="method" className="overflow-hidden bg-white py-8 lg:py-14">
+      <div className="mx-auto max-w-8xl px-4 lg:px-9">
+        <div className="relative overflow-hidden rounded-[26px] border border-[#B7DFE3] bg-gradient-to-br from-white via-[#F6FFFC] to-[#FDF4FF] shadow-xl lg:rounded-[38px]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_25%,rgba(15,139,111,.08),transparent_32%),radial-gradient(circle_at_82%_58%,rgba(176,24,134,.08),transparent_35%)]" />
 
-          <div className="relative grid lg:grid-cols-[1fr_320px] gap-0">
-
+          <div className="relative grid lg:grid-cols-[1fr_320px]">
             {/* Main Story Panel */}
-            <div className="p-8 lg:p-14">
-              <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12">
-
+            <div className="p-5 lg:p-14">
+              <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:gap-12">
                 <motion.img
                   src="/logo.svg"
                   alt="Rumination Life Academy"
-                  className="w-32 h-32 lg:w-44 lg:h-44 object-contain shrink-0"
+                  className="mx-auto h-20 w-20 shrink-0 object-contain lg:mx-0 lg:h-44 lg:w-44"
                   animate={{ scale: [1, 1.03, 1] }}
                   transition={{ repeat: Infinity, duration: 5 }}
                 />
 
                 <div className="flex-1">
-
-                  <p className="text-xs font-black tracking-[0.28em] uppercase text-[#0F8B6F] mb-4">
-                    Rumination's Transformative Ecosystem
+                  <p className="mb-3 text-center text-[10px] font-black uppercase tracking-[0.22em] text-[#0F8B6F] lg:mb-4 lg:text-left lg:text-xs lg:tracking-[0.28em]">
+                    Rumination&apos;s Transformative Ecosystem
                   </p>
 
                   <AnimatePresence mode="wait">
@@ -80,20 +71,18 @@ export default function RuminationMethod() {
                       exit={{ opacity: 0, y: -18 }}
                       transition={{ duration: 0.45 }}
                     >
-                      <h2 className="text-1xl lg:text-4xl font-black leading-none mb-5 text-[#05263B]">
+                      <h2 className="mb-3 text-center text-2xl font-black leading-none text-[#05263B] lg:mb-5 lg:text-left lg:text-4xl">
                         {current.title}
                       </h2>
 
-                      
-
-                      <p className="text-slate-600 text-lg leading-9 max-w-3xl">
+                      <p className="mx-auto max-w-3xl text-center text-[15px] leading-7 text-slate-600 sm:text-[16px] lg:mx-0 lg:text-left lg:text-lg lg:leading-9">
                         {current.text}
                       </p>
                     </motion.div>
                   </AnimatePresence>
 
-                  <div className="mt-10 max-w-3xl">
-                    <div className="h-1.5 rounded-full bg-slate-200 overflow-hidden">
+                  <div className="mt-6 max-w-3xl lg:mt-10">
+                    <div className="h-1.5 overflow-hidden rounded-full bg-slate-200">
                       <motion.div
                         key={active}
                         initial={{ width: "0%" }}
@@ -103,7 +92,7 @@ export default function RuminationMethod() {
                       />
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between text-xs font-bold text-slate-500">
+                    <div className="mt-4 hidden items-center justify-between text-xs font-bold text-slate-500 lg:flex">
                       <span>Auto advancing every 20 seconds</span>
                       <span>
                         {active + 1} / {stages.length}
@@ -114,10 +103,9 @@ export default function RuminationMethod() {
               </div>
 
               {/* Insight Strip */}
-              <div className="mt-10 rounded-2xl border border-[#B7DFE3] bg-white px-5 py-4 shadow-sm">
-                <div className="flex gap-4 items-start">
-
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#05263B] via-[#0F8B6F] to-[#B01886] text-white flex items-center justify-center font-black shrink-0">
+              <div className="mt-6 rounded-2xl border border-[#B7DFE3] bg-white px-4 py-3 shadow-sm lg:mt-10 lg:px-5 lg:py-4">
+                <div className="flex items-start gap-3 lg:gap-4">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#05263B] via-[#0F8B6F] to-[#B01886] font-black text-white lg:h-9 lg:w-9">
                     ✦
                   </div>
 
@@ -129,31 +117,28 @@ export default function RuminationMethod() {
                       exit={{ opacity: 0, y: -8 }}
                       transition={{ duration: 0.35 }}
                     >
-                      <p className="text-[11px] font-black tracking-[0.22em] uppercase text-[#0F8B6F] mb-1">
+                      <p className="mb-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#0F8B6F] lg:text-[11px] lg:tracking-[0.22em]">
                         Ecosystem Insight
                       </p>
 
-                      <p className="text-sm lg:text-base font-semibold text-[#05263B]">
+                      <p className="text-[13px] font-semibold leading-6 text-[#05263B] lg:text-base">
                         {current.insight}
                       </p>
                     </motion.div>
                   </AnimatePresence>
-
                 </div>
               </div>
             </div>
 
             {/* Pathway Navigation */}
-            <div className="relative border-t lg:border-t-0 lg:border-l border-[#D7E7E9] bg-[#F8FBFC] p-8 lg:p-10 flex items-center">
+            <div className="relative flex items-center border-t border-[#D7E7E9] bg-[#F8FBFC] p-5 lg:border-l lg:border-t-0 lg:p-10">
               <div className="w-full">
-
-                <p className="text-xs font-black tracking-[0.28em] uppercase text-slate-500 mb-8">
+                <p className="mb-5 text-[10px] font-black uppercase tracking-[0.24em] text-slate-500 lg:mb-8 lg:text-xs lg:tracking-[0.28em]">
                   Pathway
                 </p>
 
                 <div className="relative">
-
-                  <div className="absolute left-[11px] top-4 bottom-4 w-[2px] bg-[#D7E7E9]" />
+                  <div className="absolute left-[11px] bottom-4 top-4 w-[2px] bg-[#D7E7E9]" />
 
                   <motion.div
                     className="absolute left-[11px] top-4 w-[2px] bg-gradient-to-b from-[#05263B] via-[#0F8B6F] to-[#B01886]"
@@ -163,7 +148,7 @@ export default function RuminationMethod() {
                     transition={{ duration: 0.65 }}
                   />
 
-                  <div className="space-y-8">
+                  <div className="space-y-5 lg:space-y-8">
                     {stages.map((stage, index) => (
                       <button
                         key={stage.title}
@@ -171,23 +156,23 @@ export default function RuminationMethod() {
                         className="relative w-full pl-10 text-left"
                       >
                         <span
-                          className={`absolute left-0 top-1.5 w-6 h-6 rounded-full border-2 transition ${
+                          className={`absolute left-0 top-1.5 h-6 w-6 rounded-full border-2 transition ${
                             active === index
-                              ? "bg-[#0F8B6F] border-white shadow-lg"
+                              ? "border-white bg-[#0F8B6F] shadow-lg"
                               : index < active
-                              ? "bg-[#B01886] border-white"
-                              : "bg-white border-[#D7E7E9]"
+                              ? "border-white bg-[#B01886]"
+                              : "border-[#D7E7E9] bg-white"
                           }`}
                         />
 
                         <div
-                          className={`rounded-full px-5 py-3 transition ${
+                          className={`rounded-full px-5 py-2.5 transition lg:py-3 ${
                             active === index
                               ? "bg-gradient-to-r from-[#05263B] via-[#0F8B6F] to-[#B01886] text-white shadow-lg"
                               : "text-slate-500 hover:text-[#05263B]"
                           }`}
                         >
-                          <p className="text-sm font-black uppercase tracking-wide">
+                          <p className="text-xs font-black uppercase tracking-wide lg:text-sm">
                             {stage.title}
                           </p>
                         </div>
@@ -196,16 +181,14 @@ export default function RuminationMethod() {
                   </div>
                 </div>
 
-                <p className="mt-10 text-sm text-slate-500 leading-6">
+                <p className="mt-6 text-[13px] leading-6 text-slate-500 lg:mt-10 lg:text-sm">
                   Decode the Inner System.
-                  <span className="block text-[#05263B] font-semibold">
+                  <span className="block font-semibold text-[#05263B]">
                     Transform the Outer Reality.
                   </span>
                 </p>
-
               </div>
             </div>
-
           </div>
         </div>
       </div>
